@@ -29,7 +29,7 @@ const createWeatherCard = (cityName ,  weatheritem , index) => {
 }
 
 const getWeatherDetails = (cityName, lat, lon) => {
-    const weatherAPI = `http://api.openweathermap.org/data/2.5/forecast/?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+    const weatherAPI = `https://api.openweathermap.org/data/2.5/forecast/?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
     fetch(weatherAPI).then(res => res.json()).then(data => {
 
         const uniqueForcastDays = [];
