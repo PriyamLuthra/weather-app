@@ -59,7 +59,7 @@ const getWeatherDetails = (cityName, lat, lon) => {
 const getCityCordinates = () => {
     const cityName = cityinput.value.trim();
     if (!cityName) return;
-    const geolocation = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${API_KEY}`
+    const geolocation = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${API_KEY}`
     fetch(geolocation).then(res => res.json()).then(data => {
         if (!data.length) return alert("tatti khaa");
         const { name, lat, lon } = data[0];
