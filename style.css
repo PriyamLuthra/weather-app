@@ -65,6 +65,7 @@ h1{
 }
 .weather-data{
     width: 100%;
+    display: none;
 }
 .current-weather{
     background-color: #5372F0;
@@ -94,6 +95,7 @@ h1{
     font-size: 1.5rem;
     margin: 20px 0px;
 }
+
 .weather-cards{
     display: flex;
     gap: 20px;
