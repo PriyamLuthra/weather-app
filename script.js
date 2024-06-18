@@ -82,3 +82,4 @@ const getCityCoordinates = () => {
 
 searchButton.addEventListener("click", getCityCoordinates);
 
+
