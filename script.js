@@ -6,8 +6,6 @@ const weatherCardDiv = document.querySelector(".weather-cards");
 const weatherDataDiv = document.querySelector(".weather-data");
 const API_KEY = "6873fd4c9bc11d632088ddb67998a454";
 
-
-
 window.addEventListener("load",()=>{
     document.querySelector(".loader").classList.add("loader--hidden")
 });
@@ -53,7 +51,7 @@ const getWeatherDetails = (cityName, lat, lon) => {
             cityinput.value = "";
             currentWeatherDiv.innerHTML = "";
             weatherCardDiv.innerHTML = "";
-
+            
             fiveDaysData.forEach((weatheritem, index) => {
                 if (index === 0) {
                     currentWeatherDiv.insertAdjacentHTML("beforeend", createWeatherCard(cityName, weatheritem, index));
@@ -116,5 +114,6 @@ const getUserCoordinates = () => {
 
 searchButton.addEventListener("click", getCityCoordinates);
 locationButton.addEventListener("click", getUserCoordinates);
+
 
 
