@@ -6,6 +6,12 @@ const weatherCardDiv = document.querySelector(".weather-cards");
 const weatherDataDiv = document.querySelector(".weather-data");
 const API_KEY = "6873fd4c9bc11d632088ddb67998a454";
 
+
+
+window.addEventListener("load",()=>{
+    document.querySelector(".loader").classList.add("loader--hidden")
+});
+
 const createWeatherCard = (cityName, weatheritem, index) => {
     if (index === 0) {
         return `
