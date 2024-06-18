@@ -65,7 +65,7 @@ const getWeatherDetails = (cityName, lat, lon) => {
 const getCityCoordinates = () => {
     const cityName = cityinput.value.trim();
     if (!cityName) return;
-    const geolocationAPI = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${API_KEY}`;
+    const geolocationAPI = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${API_KEY}`;
     fetch(geolocationAPI)
         .then(res => res.json())
         .then(data => {
